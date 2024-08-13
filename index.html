@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fav -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/fav.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/fav.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/fav.png">
+  <link rel="manifest" href="/static/fav.png">
+  <link rel="mask-icon" href="/static/fav.png" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" href="/static/fav.png" type="image/x-icon">
+  <link rel="stylesheet" href="/static/style/style.css">
+
+  <!-- Main Tagss -->
+  <meta name="author" content="Sabir Hussain Balal">
+  <link rel="canonical" href="https://sabirhussainbalal/music_app.github.io">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#ffffff">
+
+ 
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Sabir Hussain Balal"",
+      "description": "Discover excellence Here and life is an adventure and friendships last a lifetime.",
+      ]
+    }
+    </script>
+  <!-- Power Ful tags -->
+  <meta property="og:title" content="Music App">
+  <meta property="og:description"
+    content="Your journey begins here!">
+  <meta property="og:image"
+    content="/static/fav.png">
+
+  <meta name="robots" content="index, follow">
+  <!-- iOS -->
+  <title>Music App</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="left">
+        <div class="close_left_menu">X</div>
+        <div class="logos">
+          <div class="icons">
+            <!-- Avtr -->
+            <lord-icon src="https://cdn.lordicon.com/lhwyshcs.json" trigger="hover" stroke="bold">
+            </lord-icon>
+            <span>The Programming Magician</span>
+          </div>
+          <div class="icons">
+            <!-- Close -->
+            <lord-icon id="close" src="https://cdn.lordicon.com/gtzytosd.json" trigger="hover" stroke="bold">
+            </lord-icon>
+            </lord-icon>
+            <!-- Search -->
+            <lord-icon id="search" src="https://cdn.lordicon.com/ewoezmtb.json" trigger="hover" stroke="bold">
+            </lord-icon>
+            <!-- Input -->
+            <span class="input_class"><input type="text" name="input" placeholder="Search..." id="input" /></span>
+          </div>
+        </div>
+        <div class="black_line" style="background-color: black; width: 100vw; height: 3px;"></div>
+        <div class="playlist">
+          <div class="logos">
+            <div class="icons">
+              <!-- Avtr -->
+              <lord-icon src="https://cdn.lordicon.com/opwjgfij.json" trigger="hover" stroke="bold">
+              </lord-icon>
+              </lord-icon>
+              <span class="create">Create Your Playlist</span>
+            </div>
+          </div>
+          <div class="lists">
+            <ul>
+
+
+            </ul>
+          </div>
+          <footer>
+            <div class="footer">
+
+
+              <span>Legal</span>
+
+
+              <span>Safety &amp; Privacy Center</span>
+
+
+              <span>Privacy Policy</span>
+
+
+              <span>Cookies</span>
+
+
+              <span>About Ads</span>
+
+              <span>Accessibility</span>
+
+
+              <span>Cookies</span>
+
+              <div class="fot">
+                <p>&copy; Copyright 2024 'Music App' All
+                  rights reserved.</p>
+                <p>Created with passion by</p>
+                <p><a href="https://www.upwork.com/freelancers/~014d19ce109591c1de" target="_blank" title="Upwork">Sabir
+                    Hussain Balal</a></p>
+              </div>
+            </div>
+          </footer>
+        </div>
+
+      </div>
+      <div class="right">
+        <div class="half">
+          <div class="open_left_menu">|||</div>
+          <div class="btns">
+            <div class="btn sin">Sign up</div>
+            <div class="btn log">Log in</div>
+          </div>
+        </div>
+        <!-- visulization -->
+        <div class="visulization_animation">
+          <p id="song_name"></p>
+          <div id="audio-container">
+            <div class="play">
+              <div class="one">
+                
+                <lord-icon id="left_songs" src="https://cdn.lordicon.com/axlqyijj.json" trigger="hover" stroke="bold">
+                </lord-icon>
+                <div class="time">00:00</div>
+              </div>
+              <button id="music-button" class="button-89 button" role="button">🎧</button>
+              <div class="sec">
+                <div class="duration">00:00</div>
+                <lord-icon id="right_songs" src="https://cdn.lordicon.com/jluuncto.json" trigger="hover" stroke="bold">
+                </lord-icon>
+              </div>
+
+            </div>
+            <div class="control">
+              <div class="full"></div>
+              <div class="borders"></div>
+            </div>
+            <canvas id="visualizationCanvas" height="400"></canvas>
+          </div>
+          <div id="modes" class="modes1">
+            <div id="mode1"></div>
+          </div>
+        </div>
+        <div class="black_line" style="background-color: black; width: 100vw; height: 5px;"></div>
+        <div class="songs">
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div class="video-background button">
+    <video autoplay="" loop="" muted="">
+      <source src="sounds/error.mkv" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <script src="/static/style/music_animation.js"></script>
+  <script src="/static/style/btn.js"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,821 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: black;
+  color: white;
+  background-image: url(/static/pic/Interstellar.PNG);
+}
+main{
+  margin: 10px 0;
+}
+:root {
+  --width: 30px
+}
+
+.container {
+  display: flex;
+}
+
+
+
+.left {
+  border-radius: 10px;
+  width: 30vw;
+  box-sizing: border-box;
+  margin: 2px 5px;
+  height: 95vh;
+  background-color: #121212;
+  opacity: 0.9;
+  position: relative;
+  overflow: hidden auto;
+}
+.right {
+  background-color: #121212;
+  width: 68vw;
+  height: 95vh;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 2px 5px;
+  opacity: 0.9;
+}
+
+.left .logos {
+  background: #121212;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 3px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+
+.icons span {
+  font-size: 18px;
+  background: linear-gradient(to right,
+      #8a7dff,
+      #ff9cbe,
+      #70d7ff,
+      #ff70cf);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  cursor: text;
+  font-weight: bolder;
+  position: relative;
+}
+
+.icons input {
+  font-size: 12px;
+  background: linear-gradient(to right,
+      #8a7dff,
+      #ff9cbe,
+      #70d7ff,
+      #ff70cf);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: none;
+}
+
+/* .icons input::placeholder {} */
+.input_class input {
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  height: 20px;
+  outline: none;
+  padding: 5px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: auto;
+}
+
+.input_class input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  width: 90%;
+}
+
+.icons:hover {
+  font-style: italic;
+}
+
+#close {
+  display: none;
+}
+
+.playlist {
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 75vh;
+  background-color: #121212;
+  position: relative;
+}
+
+.lists {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 40vh;
+}
+
+ul li {
+  list-style: none;
+  padding: 0 5px;
+  margin: 0 10px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list span {
+  font-size: 11px;
+}
+
+lord-icon {
+  width: var(--width);
+  height: var(--width);
+}
+
+span.create {
+  font-size: 15px;
+}
+
+li .logos:hover {
+  border: 3px solid #1f1f1f;
+  background: #1f1f1f;
+  cursor: pointer;
+}
+
+li span:hover {
+  cursor: pointer;
+}
+
+.left lord-icon {
+  cursor: pointer;
+}
+
+.footer span {
+  font-size: 11px;
+}
+
+.footer p {
+  font-size: 13px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 5px;
+  padding: 5px;
+}
+
+.fot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  background: linear-gradient(to right,
+      #8a7dff,
+      #ff9cbe,
+      #70d7ff,
+      #ff70cf);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  cursor: text;
+}
+
+/* Custom scrollbar styling for Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  /* Dark background for the track */
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  /* Dark grey handle */
+  border-radius: 10px;
+  border: 2px solid #1e1e1e;
+  /* Match track background for a rounded effect */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+  /* Lighten handle on hover */
+}
+
+/* Horizontal scrollbar styling */
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #555;
+  /* Keep it consistent with the vertical scrollbar */
+}
+
+/* Horizontal scrollbar hover effect */
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: #888;
+  /* Lighten handle on hover */
+}
+
+/* Horizontal track */
+::-webkit-scrollbar-track:horizontal {
+  background: #1e1e1e;
+  /* Match vertical track background */
+}
+
+/* Lets Start Other side */
+
+
+
+#left_songs:hover,#right_songs:hover{
+  border: 3px solid #1f1f1f;
+  background: #1f1f1f;
+}
+#left_songs,#right_songs{
+  cursor: pointer;
+}
+.half {
+  display: flex;
+  background-color: #1e1e1e;
+  padding: 10px;
+  justify-content: end;
+  box-sizing: border-box;
+}
+
+.btns {
+  display: flex;
+  border: 2px solid #464343;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.log {
+  background-color: #464343;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.sin {
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.full {
+  width: 0;
+  background: #373b44;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.borders {
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e;
+  cursor: pointer;
+  position: absolute;
+}
+
+.songs {
+  width: 95%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: auto;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  box-shadow: 1px 0px 17px 0 black;
+  margin-top: 5px;
+
+}
+
+
+
+.songs #plus {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  margin: 5px;
+  cursor: pointer;
+}
+
+div.gallery {
+  margin: 5px;
+  float: left;
+  width: 180px;
+  position: relative;
+  padding: 5px;
+}
+
+div.gallery:hover {
+  background-color: #464343;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: default;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
+
+/* sad */
+
+.visulization_animation {
+  width: 100%;
+  text-align: center;
+  cursor: default;
+  transition: all ease 0.4s;
+  margin-top: 10px;
+}
+
+.visulization_animation p {
+  background: linear-gradient(to right,
+      #8a7dff,
+      #ff9cbe,
+      #70d7ff,
+      #ff70cf);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  cursor: text;
+}
+
+#audio-container {
+  margin-top: 20px;
+}
+
+
+
+canvas {
+  /* background: linear-gradient(to right,
+  #8a7dff,
+  #ff9cbe,
+  #70d7ff,
+  #ff70cf);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 500px;
+  height: 110px;
+  margin-top: 20px; */
+  height: 110px;
+  width: 100%;
+  margin: 0 15px;
+}
+
+
+.music-button {
+  background-color: linear-gradient(to right,
+      #8a7dff,
+      #ff9cbe,
+      #70d7ff,
+      #ff70cf);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.music-button:hover {
+  background-color: #0056b3;
+}
+
+.vib {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: vibrate 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-1deg);
+  }
+
+  20% {
+    transform: rotate(1deg);
+  }
+
+  30% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(1deg);
+  }
+
+  50% {
+    transform: rotate(-1deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(-1deg);
+  }
+
+  80% {
+    transform: rotate(1deg);
+  }
+
+  90% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-1deg);
+  }
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-89 {
+  --b: 3px;
+  /* border thickness */
+  --s: 0.45em;
+  /* size of the corner */
+  --color: #373b44;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0) var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 23px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+
+
+
+.control {
+  width: 50vw;
+  height: 5px;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  position: relative;
+}
+
+
+.play {
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.time {
+  color: #373b44;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: text;
+}
+
+.duration {
+  color: #373b44;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: text;
+}
+.half{
+  position: relative;
+}
+
+
+.open_left_menu{
+  position: absolute;
+  left: 0;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+
+}
+
+
+.open_left_menu:hover{
+ background-color: #373b44;
+ padding: 5px;
+}
+
+.close_left_menu{
+  position: absolute;
+  right: 0;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+
+}
+
+.one,.sec{
+  display: flex;
+}
+.one{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sec{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.close_left_menu:hover{
+ background-color: #373b44;
+ padding: 5px;
+}
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (max-width: 300px) {
+  .button-89 {
+    font-size: 19px;
+  }
+  .left{
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    display: none;
+    width: 80vw;
+  }
+  .right{
+    width: 95vw;
+    margin: auto;
+  }
+  .close_left_menu{
+    display: none
+  }
+  .play{
+    width: 95vw;
+  }
+}
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 300px) {
+  .button-89 {
+    font-size: 19px;
+  }
+  .left{
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    width: 70vw;
+    display: none;
+  }
+  .right{
+    width: 95vw;
+    margin: auto;
+  }
+  .close_left_menu{
+    display: none
+  }
+  .play{
+    width: 80vw;
+  }
+}
+
+
+
+   /* Small devices (portrait tablets and large phones, 600px and up) */
+   @media only screen and (min-width: 400px) {
+    .button-89 {
+      font-size: 19px;
+    }
+    .left{
+      position: absolute;
+      z-index: 1;
+      opacity: 1;
+      width: 60vw;
+      display: none;
+    }
+    .open_left_menu{
+      display: inline;
+    }
+    .right{
+      width: 95vw;
+      margin: auto;
+    }
+    .close_left_menu{
+      display: none
+    }
+    .play{
+      width: 60vw;
+    }
+  }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 500px) {
+      .button-89 {
+        font-size: 19px;
+      }
+      .left{
+        position: absolute;
+        z-index: 1;
+        opacity: 1;
+        width: 50vw;
+        display: none;
+      }
+      .open_left_menu{
+        display: inline;
+      }
+      .right{
+        width: 95vw;
+        margin: auto;
+      }
+      .close_left_menu{
+        display: none
+      }
+      .play{
+        width: 60vw;
+      }
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      .button-89 {
+        font-size: 19px;
+      }
+      .left{
+        position: absolute;
+        display: none;
+        z-index: 1;
+        z-index: 1;
+        opacity: 1;
+        width: 50vw;
+      }
+      .right{
+        width: 95vw;
+        margin: auto;
+      }
+
+      .open_left_menu{
+        display: inline;
+      }
+      .close_left_menu{
+        display: none
+      }
+      .play{
+        width: 70vw;
+      }
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 810px) {
+      .button-89 {
+        font-size: 20px;
+      }
+      .left{
+        display: inline;
+        z-index: 1;
+        opacity: 1;
+        width: 30vw;
+        position: relative;
+      }
+      .open_left_menu{
+        display: none
+      }
+      .close_left_menu{
+        display: none
+      }
+
+      .play{
+        width: 70vw;
+      }
+
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      .button-89 {
+        font-size: 22px;
+      }
+      .left{
+        display: inline;
+        position: relative;
+        width: 30vw;
+      }
+      .open_left_menu{
+        display: none
+      }
+      .close_left_menu{
+        display: none
+      }
+      .play{
+        width: 50vw;
+      }
+   
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      .button-89 {
+        font-size: 23px;
+      }
+      .left{
+        display: inline;
+        position: relative;
+        width: 30vw;
+      }
+      .open_left_menu{
+        display: none
+      }
+
+      .close_left_menu{
+        display: none
+      }
+      .play{
+        width: 50vw;
+      }
+    }
+
+
+
+
+  
