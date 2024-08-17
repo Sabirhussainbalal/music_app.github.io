@@ -18,6 +18,12 @@ main {
 #myUL {
   display: none; /* Start with the list hidden */
 }
+
+ul#myUL li a{
+  color: #ffffffd1;
+    margin: 5px 5px;
+    display: block;
+}
 .container {
   display: flex;
 }
