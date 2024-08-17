@@ -542,7 +542,6 @@ canvas {
 .half {
   position: relative;
 }
-
 .open_left_menu {
   position: absolute;
   left: 0;
@@ -552,6 +551,7 @@ canvas {
   cursor: pointer;
   display: none;
   z-index: 2;
+  border: 2px solid #373b44;
 }
 
 .open_left_menu:hover {
@@ -561,6 +561,9 @@ canvas {
 
 .close_left_menu {
   position: absolute;
+  border: 2px solid #373b44;
+  display: flex;
+  align-items: center;
   right: 0;
   margin: 10px;
   font-size: 30px;
@@ -569,7 +572,6 @@ canvas {
   display: none;
   z-index: 2;
 }
-
 .one,
 .sec {
   display: flex;
