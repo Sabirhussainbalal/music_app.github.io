@@ -9,6 +9,7 @@ let currentAudio = null;
 let currentAudioIndex = -1; // Start with -1, no song is playing initially
 
 // Loop through audio files and create gallery items
+// Loop through audio files and create gallery items
 audios.forEach((audio, index) => {
     const img = imgs[index]; // Assuming imgs and audios are in the same order
     
@@ -57,6 +58,7 @@ document.querySelector('#myUL').addEventListener('click', (e) => {
         addToPlaylist(clickedAudio);
     }
 });
+
 
 // Fix the `playAudio` function
 function playAudio(audio) {
@@ -162,6 +164,9 @@ document.getElementById('left_songs').addEventListener('click', () => {
     playPreviousSong();
 });
 
+
+
+
 function addToPlaylist(audio) {
     const listItem = document.createElement('li');
     listItem.innerHTML = `
@@ -189,6 +194,42 @@ function addToPlaylist(audio) {
 
     playlist.appendChild(listItem);
 }
+
+// Extra
+// JavaScript Code
+
+
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue, hasVisibleItems;
+    input = document.getElementById('input');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+    hasVisibleItems = false;
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+        hasVisibleItems = true; // Mark that there is at least one visible item
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  
+    // Show the UL if there's input and at least one visible item
+    if (input.value && hasVisibleItems) {
+      ul.style.display = "block";
+    } else {
+      ul.style.display = "none";
+    }
+  }
+
+// End
+
 
 function updateAudioTime() {
     const currentTime = currentAudio.currentTime;
@@ -276,59 +317,3 @@ function draw() {
 }
 
 
-
-// let audioContext;
-// let analyser;
-// let dataArray;
-// let canvas;
-// let canvasCtx;
-
-// function initVisualization(audio) {
-//     // Set up the audio context and analyser
-//     if (audioContext) {
-//         audioContext.close();
-//     }
-//     audioContext = new (window.AudioContext || window.webkitAudioContext)();
-//     analyser = audioContext.createAnalyser();
-//     const source = audioContext.createMediaElementSource(audio);
-//     source.connect(analyser);
-//     analyser.connect(audioContext.destination);
-
-//     // Set up the canvas for visualization
-//     canvas = document.getElementById('visualizationCanvas');
-//     canvasCtx = canvas.getContext('2d');
-
-//     // Set up the analyser properties
-//     analyser.fftSize = 256;
-//     const bufferLength = analyser.frequencyBinCount;
-//     dataArray = new Uint8Array(bufferLength);
-
-//     // Start the visualization
-//     draw();
-// }
-
-// function draw() {
-//     if (!analyser || !canvasCtx) return;
-
-//     requestAnimationFrame(draw);
-
-//     // Clear the canvas
-//     canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
-
-//     // Get the frequency data
-//     analyser.getByteFrequencyData(dataArray);
-
-//     // Draw the visualization
-//     const barWidth = (canvas.width / dataArray.length) * 2.5;
-//     let barHeight;
-//     let x = 0;
-
-//     for (let i = 0; i < dataArray.length; i++) {
-//         barHeight = dataArray[i];
-
-//         // Use a contrasting color
-//         canvasCtx.fillStyle =  'hsla(184, 85%, 63%, 1)'; // Semi-transparent white for bars
-//         canvasCtx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight / 2);
-//         x += barWidth + 1;
-//     }
-// }
