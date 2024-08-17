@@ -15,15 +15,7 @@ main {
 :root {
   --width: 30px;
 }
-#myUL {
-  display: none; /* Start with the list hidden */
-}
 
-ul#myUL li a{
-  color: #ffffffd1;
-    margin: 5px 5px;
-    display: block;
-}
 .container {
   display: flex;
 }
@@ -62,6 +54,10 @@ ul#myUL li a{
   flex-direction: row;
   align-items: center;
   margin: 5px;
+}
+
+#myUL {
+  display: none; /* Start with the list hidden */
 }
 
 .icons span {
@@ -289,6 +285,12 @@ footer {
   background-color: #1e1e1e;
   cursor: pointer;
   position: absolute;
+}
+
+ul#myUL li a{
+  color: white;
+    margin: 5px 5px;
+    display: block;
 }
 
 .songs {
@@ -550,6 +552,7 @@ canvas {
 .half {
   position: relative;
 }
+
 .open_left_menu {
   position: absolute;
   left: 0;
@@ -580,6 +583,7 @@ canvas {
   display: none;
   z-index: 2;
 }
+
 .one,
 .sec {
   display: flex;
@@ -626,6 +630,7 @@ canvas {
   .play {
     width: 80%;
   }
+
 
   .control {
     width: 80%;
@@ -674,6 +679,7 @@ canvas {
   #right_songs {
     width: 25px;
   }
+
   .icons span {
     font-size: 14px;
   }
