@@ -13,7 +13,7 @@ document.getElementById("close").addEventListener("click", () => {
 
 // Login or signup
 document.querySelector(".btns").addEventListener("click", () => {
-  alert('Sorry You Cant Login/Signin Because its just a simple music page..Created by Sabir')
+  alert('Sorry, you can't log in or sign in—this is just a simple music page created with love by Sabir. Enjoy the tunes! 🎶')
 });
 
 
