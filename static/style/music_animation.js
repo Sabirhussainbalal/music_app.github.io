@@ -11,27 +11,23 @@ let currentAudioIndex = -1; // Start with -1, no song is playing initially
 // Loop through audio files and create gallery items
 audios.forEach((audio, index) => {
     const img = imgs[index]; // Assuming imgs and audios are in the same order
-
+    
+    // Append the song to the search results list
+    document.querySelector('#myUL').innerHTML += `<li><a id="search-${audio}" href="#${audio}">${audio}</a></li>`;
+    
     // Create the gallery item
-        document.querySelector('#myUL').innerHTML =  document.querySelector('#myUL').innerHTML +  `<li><a href="#${audio}">${audio}</a></li>`;
     const galleryItem = document.createElement('div');
     galleryItem.className = 'gallery';
 
     galleryItem.innerHTML = `
         <lord-icon id="plus" src="https://cdn.lordicon.com/rcgrnzji.json" trigger="hover" stroke="bold"></lord-icon>
         <a target="_blank" href="#">
-            <img src="static/pic/${img}" alt="${img}" width="600" height="400">
+            <img id='${audio}' src="static/pic/${img}" alt="${img}" width="600" height="400">
         </a>
         <div class="desc">${audio}</div>
     `;
 
-    // Add click event for playing audio
-
-    // Attach event listener to parent element
-document.querySelector('#myUL').addEventListener('click', (e) => {
-    e.preventDefault();
-    playAudio(audio, img);
-});
+    // Attach event listener to play audio from gallery
     galleryItem.querySelector('a').addEventListener('click', (e) => {
         e.preventDefault();
         playAudio(audio, img);
@@ -45,6 +41,21 @@ document.querySelector('#myUL').addEventListener('click', (e) => {
 
     // Append the gallery item to the container
     songsContainer.appendChild(galleryItem);
+});
+
+// Attach event listener to search results (UL)
+document.querySelector('#myUL').addEventListener('click', (e) => {
+    if (e.target && e.target.tagName === 'A') {
+        e.preventDefault();
+
+        // Extract the audio name from the clicked element
+        const clickedAudio = e.target.id.replace('search-', '');
+        const img = imgs[audios.indexOf(clickedAudio)]; // Get the corresponding image
+
+        // Play the corresponding audio and add to playlist
+        playAudio(clickedAudio, img);
+        addToPlaylist(clickedAudio);
+    }
 });
 
 // Fix the `playAudio` function
