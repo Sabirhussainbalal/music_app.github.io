@@ -664,4 +664,10 @@ canvas {
   #right_songs {
     width: 25px;
   }
+  .icons span {
+    font-size: 14px;
+  }
+  ul li span {
+    font-size: 12px;
+  }
 }
