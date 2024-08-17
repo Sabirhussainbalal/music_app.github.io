@@ -15,7 +15,9 @@ main {
 :root {
   --width: 30px;
 }
-
+#myUL {
+  display: none; /* Start with the list hidden */
+}
 .container {
   display: flex;
 }
