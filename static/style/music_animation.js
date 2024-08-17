@@ -1,6 +1,6 @@
-// Assuming you have arrays of filenames
-const imgs = ['Blinder.PNG', 'Haqeeqat.PNG', 'Interstellar.PNG','Lovely_x_anotherLove.PNG','Mat_Aazma_Re.PNG','Music.PNG']; // replace with actual filenames
-const audios = ['Im_a_peakyblinder.mp3', 'Haqeeqat.mp3', 'Interstellar.mp3','Lovely_X_Another_Love.mp3','Mat_aazma_re.mp3','Music.mp3']; // replace with actual filenames
+const imgs = ['Blinder.PNG', 'Haqeeqat.PNG', 'Interstellar.PNG','Lovely_x_anotherLove.PNG','Mat_Aazma_Re.PNG','Music.PNG', 'belki.PNG', 'Dandelions_X_Kaise_Hua.PNG', 'I_wanna_be _yours.PNG', 'M𝐲_𝐞𝐲𝐞_𝐨𝐧_𝐲𝐨u.PNG', 'Samjho_Na_X_Wishes.PNG']; 
+const audios = ['Im_a_peakyblinder.mp3', 'Haqeeqat.mp3', 'Interstellar.mp3','Lovely_X_Another_Love.mp3','Mat_aazma_re.mp3','Music.mp3' , 'belki.mp3', 'Dandelions_X_Kaise_Hua.mp3', 'I_wanna_be _yours.mp3', 'M𝐲_𝐞𝐲𝐞_𝐨𝐧_𝐲𝐨u.mp3', 'Samjho_Na_X_Wishes.mp3']; 
+
 
 // Select the container where you want to add the gallery items
 const songsContainer = document.querySelector('.songs');
