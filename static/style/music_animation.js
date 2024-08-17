@@ -13,6 +13,7 @@ audios.forEach((audio, index) => {
     const img = imgs[index]; // Assuming imgs and audios are in the same order
 
     // Create the gallery item
+        document.querySelector('#myUL').innerHTML =  document.querySelector('#myUL').innerHTML +  `<li><a href="#${audio}">${audio}</a></li>`;
     const galleryItem = document.createElement('div');
     galleryItem.className = 'gallery';
 
@@ -25,6 +26,12 @@ audios.forEach((audio, index) => {
     `;
 
     // Add click event for playing audio
+
+    // Attach event listener to parent element
+document.querySelector('#myUL').addEventListener('click', (e) => {
+    e.preventDefault();
+    playAudio(audio, img);
+});
     galleryItem.querySelector('a').addEventListener('click', (e) => {
         e.preventDefault();
         playAudio(audio, img);
